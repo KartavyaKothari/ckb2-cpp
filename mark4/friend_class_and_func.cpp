@@ -2,27 +2,57 @@
 using namespace std;
 
 class Citizen{
-    private:
-    int atm_pin;
-    int bank_balance;
+    string aadhaar;
+    int atm_balance;
+    int age;
 
     public:
+    string name;
+
+    Citizen(string n, string ad, int a, int ab){
+        name = n;
+        age = a;
+        atm_balance = ab;
+        aadhaar = ad;
+    }
+
+    void introduce(){
+        cout<<"Hi, my name is "<<name<<", I am "<<age<<" years old"<<endl;
+    }
+
     friend class Government;
-    friend void backdoor(Citizen c);
+    friend void hackerman(Citizen *c);
 };
+
+void hackerman(Citizen* c){
+    cout<<"Hacking details:"<<endl;
+    cout<<"Name: "<<c->name<<endl;
+    cout<<"Age: "<<c->age<<endl;
+    cout<<"Aadhaar: "<<c->aadhaar<<endl;
+    cout<<"Balance: "<<c->atm_balance<<endl;
+}
 
 class Government{
     public:
-    void hackerman(Citizen c){
-        cout<<c.atm_pin<<" "<<c.bank_balance;
+    void tax_raid(Citizen* c){
+        cout<<"Tax raid details:"<<endl;
+        cout<<"Name: "<<c->name<<endl;
+        cout<<"Age: "<<c->age<<endl;
+        cout<<"Aadhaar: "<<c->aadhaar<<endl;
+        cout<<"Balance: "<<c->atm_balance<<endl;
     }
 };
 
-void backdoor(Citizen c){
-    cout<<c.atm_pin<<" "<<c.bank_balance;
-}
-
 int main(){
+    Citizen *c = new Citizen("Sushanth","12344321",19,45000000);
+    c->introduce();
+    cout<<endl;
+
+    Government g;
+    g.tax_raid(c);
+
+    cout<<endl;
+    hackerman(c);
 
     return 0;
 }
