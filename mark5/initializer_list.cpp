@@ -11,6 +11,8 @@ class GoodStudent{
     //     this->name = name;
     //     this->age = age;
     //     this->marks = marks;
+
+    //     // cout<<this<<endl;
     // }
 
     GoodStudent(string n, int a, int m):
@@ -28,7 +30,8 @@ class GoodStudent{
 
 int main(){
     GoodStudent *g = new GoodStudent("Kishan",11,100);
-    g->introduce();
+    // g->introduce();
+    cout<<g<<endl;
 
     return 0;
 }
