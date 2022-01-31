@@ -10,3 +10,7 @@ Sorting, searching (bst), DFS*, BFS*
 
 Advanced DS - Trie, Segment tree, Disjoin set union, AVL, red black trees, 
 Adavnced Algo - SCC (kosarjaru, trajans), KMP and Rabin karp, 
+
+
+1) Introduction to algorithms 
+2) Cracking the coding interview 

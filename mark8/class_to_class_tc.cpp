@@ -32,11 +32,11 @@ class Imperial{
         this->inches = i;
     }
 
-    // Imperial(Metric &m){
-    //     miles = m.kms/1.6;
-    //     feet = m.m/0.3;
-    //     inches = m.cms/2.54;
-    // }
+    Imperial(Metric &m){
+        miles = m.kms/1.6;
+        feet = m.m/0.3;
+        inches = m.cms/2.54;
+    }
 
     void operator =(Metric &m){
         miles = m.kms/1.6;
@@ -64,8 +64,8 @@ int main(){
     Metric m = (Metric) i;
     m.display();
 
-    Imperial i2;
-    i2 = m;
+    Imperial i2 = m;
+    // i2 = m;
     // Imperial i2(m);
     i2.display();
 
