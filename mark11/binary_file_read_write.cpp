@@ -2,40 +2,42 @@
 using namespace std;
 
 class Student{
-    string name;
+    // string name;
     int age;
-    char gender;
+    int salary;
 
     public:
 
     Student(){}
 
-    Student(string n, int a, char g){
-        name = n;
+    Student(int a, int sal){
         age = a;
-        gender = g;
+        salary = sal;
     }
 
     void display(){
-        cout<<"Name: "<<name<<endl;
-        cout<<"Gender: "<<gender<<endl;
+        // cout<<"Name: "<<name<<endl;
+        cout<<"Salary: "<<salary<<endl;
         cout<<"Age: "<<age<<endl;
     }
 };
 
 int main(){
     vector<Student> arr;
-    // arr.push_back(Student("Nakul",21,'M'));
-    // arr.push_back(Student("Ishika",25,'F'));
-    // arr.push_back(Student("Yashwant",19,'M'));
+    arr.push_back(Student(21,20000));
+    arr.push_back(Student(25,50000));
+    arr.push_back(Student(19,25000));
 
-    ifstream fs("akashdeep.strange");
+    fstream fs("akashdeep.strange",ios::out | ios::binary);
 
-    // for(Student s: arr){
-    //     // fs<<s;
-    //     fs.write((char*)&s,sizeof(Student));
-    //     // cout<<endl;
-    // }
+    for(Student s: arr){
+        // fs<<s;
+        fs.write((char*)&s,sizeof(Student));
+        // cout<<endl;
+    }
+
+    fs.close();
+    fs.open("akashdeep.strange",ios::in | ios::binary);
 
     vector<Student> arr2(3);
 
