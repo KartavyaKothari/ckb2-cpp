@@ -27,3 +27,20 @@ Cpp applications:
 8) Blockchains
 9) Competetive coding
 10) Cryptography 
+
+
+
+Today:
+Bank management system
+
+STL - map
+Trie
+
+Tomo:
+Compare complexitieds
+Any DP problem timeline, how to build solution, think about it etc
+Movie suggestion list
+
+Stories:
+- My Btech placement
+- My IITb CS placement 
